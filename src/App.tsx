@@ -172,7 +172,7 @@ function App() {
       </section>
 
       <section id="services" className="services section-shell reveal-section" data-reveal aria-labelledby="services-title">
-        <div className="section-title"><p>01 / What I do</p><h2 id="services-title">Useful, not<br />overcomplicated.</h2></div>
+        <div className="section-title"><p>01 / What I do</p><h2 id="services-title">Useful, not<br />complicated.</h2></div>
         <div className="services-list">
           {[
             ['01', 'Websites & applications', 'From a focused marketing site to a tailored web application, built around how your business actually works.'],

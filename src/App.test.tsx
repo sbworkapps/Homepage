@@ -6,7 +6,7 @@ describe('SBoyle portfolio', () => {
   it('renders the services-led homepage and contact form', () => {
     render(<App />)
     expect(screen.getByRole('heading', { name: /websites that work/i })).toBeInTheDocument()
-    expect(screen.getByRole('heading', { name: /useful, not overcomplicated/i })).toBeInTheDocument()
+    expect(screen.getByRole('heading', { name: /useful, not complicated/i })).toBeInTheDocument()
     expect(screen.getAllByRole('link', { name: 'Contact' })[0]).toHaveAttribute('href', '#contact')
     expect(screen.getByLabelText('Name')).toHaveAttribute('name', 'name')
     expect(screen.getByLabelText('Email')).toHaveAttribute('name', 'email')
