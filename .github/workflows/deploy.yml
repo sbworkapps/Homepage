@@ -24,8 +24,8 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
-      # A custom domain serves the site from its root rather than /Homepage/.
-      - run: npm run build
+      # This is a GitHub project site, so built assets need the repository path.
+      - run: VITE_BASE_PATH=/${{ github.event.repository.name }}/ npm run build
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

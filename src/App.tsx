@@ -51,6 +51,15 @@ function ContactForm() {
   const submittingRef = useRef(false)
 
   useEffect(() => {
+    const basinScriptId = 'basin-js'
+    if (!document.getElementById(basinScriptId)) {
+      const basinScript = document.createElement('script')
+      basinScript.id = basinScriptId
+      basinScript.src = 'https://js.usebasin.com/v2.11.1.min.js'
+      basinScript.async = true
+      document.body.append(basinScript)
+    }
+
     const isCurrentForm = (event: Event) => (event as CustomEvent<{ form?: HTMLFormElement }>).detail?.form === formRef.current
     const handleSubmitted = (event: Event) => {
       if (isCurrentForm(event)) setStatus('submitting')
